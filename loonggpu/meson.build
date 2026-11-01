@@ -8,6 +8,7 @@ libdrm_loonggpu = library(
   [
     files(
       'loonggpu_bo.c',
+      'loonggpu_cs.c',
       'loonggpu_device.c',
       'loonggpu_gpu_info.c',
       'loonggpu_vamgr.c',
