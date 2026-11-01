@@ -31,6 +31,9 @@ endif
 if with_amdgpu
   subdir('amdgpu')
 endif
+if with_loonggpu
+  subdir('loonggpu')
+endif
 if with_exynos
   subdir('exynos')
 endif
