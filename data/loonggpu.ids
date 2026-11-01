@@ -1,0 +1,11 @@
+# List of LOONGGPU IDs
+#
+# Syntax:
+# device_id,	revision_id,	product_name        <-- single tab after comma
+#
+# Both IDs are hexadecimal.
+
+1.0.0
+7A25,	1,	LOONGSON LoongGPU LG100
+7A35,	10,	LOONGSON LoongGPU LG200
+9A10,	0,	LOONGSON LoongGPU LG210
