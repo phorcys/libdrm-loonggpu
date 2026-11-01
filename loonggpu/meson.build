@@ -42,3 +42,15 @@ ext_libdrm_loonggpu = declare_dependency(
 )
 
 meson.override_dependency('libdrm_loonggpu', ext_libdrm_loonggpu)
+
+if get_option('default_library') != 'static'
+  test(
+    'loonggpu-symbols-check',
+    symbols_check,
+    args : [
+      '--lib', libdrm_loonggpu,
+      '--symbols-file', files('loonggpu-symbols.txt'),
+      '--nm', prog_nm.full_path(),
+    ],
+  )
+endif
