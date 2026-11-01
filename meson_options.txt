@@ -34,6 +34,11 @@ option(
   description : '''Enable support for amdgpu's KMS API.''',
 )
 option(
+  'loonggpu',
+  type : 'feature',
+  description : '''Enable support for LoongGPU's KMS API.''',
+)
+option(
   'nouveau',
   type : 'feature',
   description : '''Enable support for nouveau's KMS API.''',

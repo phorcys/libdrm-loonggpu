@@ -116,6 +116,12 @@ with_amdgpu = get_option('amdgpu') \
   .allowed()
 summary('AMDGPU', with_amdgpu)
 
+with_loonggpu = get_option('loonggpu') \
+  .require(host_machine.system() == 'linux', error_message : 'libdrm_loonggpu requires Linux') \
+  .require(with_atomics, error_message : 'libdrm_loonggpu requires atomics') \
+  .allowed()
+summary('LoongGPU', with_loonggpu)
+
 with_nouveau = get_option('nouveau') \
   .require(with_atomics, error_message : 'libdrm_nouveau requires atomics') \
   .allowed()
@@ -307,6 +313,7 @@ install_headers(
   'include/drm/msm_drm.h', 'include/drm/nouveau_drm.h',
   'include/drm/qxl_drm.h', 'include/drm/r128_drm.h',
   'include/drm/radeon_drm.h', 'include/drm/amdgpu_drm.h',
+  'include/drm/loonggpu_drm.h',
   'include/drm/savage_drm.h', 'include/drm/sis_drm.h',
   'include/drm/tegra_drm.h', 'include/drm/vc4_drm.h',
   'include/drm/via_drm.h', 'include/drm/virtgpu_drm.h',
