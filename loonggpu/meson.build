@@ -11,6 +11,7 @@ libdrm_loonggpu = library(
       'loonggpu_cs.c',
       'loonggpu_device.c',
       'loonggpu_gpu_info.c',
+      'loonggpu_userq.c',
       'loonggpu_vamgr.c',
     ),
     config_file,
